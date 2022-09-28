@@ -1,0 +1,19 @@
+.todo-container{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+.todo-list{
+    /* background-color: antiquewhite; */
+    padding: 25px;
+    margin: 100px;
+}
+.todo-stats{
+    background-color: #fff;
+    padding: 15px;
+}
+.todo-list h1{
+    color: #66BFBF;
+}
+.icon-dumb{
+    color: #66BFBF;
+}
