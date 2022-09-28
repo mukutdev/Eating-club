@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 4fr 1fr;
 }
-.todo-list{
+.logo{
     /* background-color: antiquewhite; */
     padding: 25px;
     margin: 100px;
@@ -16,4 +16,9 @@
 }
 .icon-dumb{
     color: #66BFBF;
+}
+.todo-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 20px;
 }
