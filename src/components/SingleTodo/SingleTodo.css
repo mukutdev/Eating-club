@@ -1,22 +1,22 @@
-.todo-card{
+.food-card{
     background-color: #fff;
     padding: 20px;
     border-radius: 6px;
 }
-.todo-img img{
+.food-img img{
     width: 100%;
     height: 250px;
     object-fit: cover;
     border-radius: 7px;
 }
-.todo-info{
+.food-info{
     margin: 20px 0;
     line-height:26px;
 }
-.todo-info h3{
+.food-info h3{
     margin: 10px 0;
 }
-.todo-info p{
+.food-info p{
     margin-bottom: 12px;
 }
 .btn{

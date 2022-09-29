@@ -3,8 +3,8 @@
     grid-template-columns: 4fr 1fr;
     gap: 50px;
 }
+
 .todo-information{
-    /* background-color: antiquewhite; */
     padding: 25px;
     margin: 50px;
 }
@@ -25,12 +25,38 @@
     padding-top: 20px;
     margin-left: 15px;
 }
-.icon-dumb{
-    color: #C21010;
-}
 .todo-wrapper{
     margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(3 , 1fr);
     gap: 20px;
+}
+
+/* media query  for mobile devices*/
+
+@media screen and (max-width: 576px) {
+    .todo-container{
+        grid-template-columns:1fr;
+    }
+    .logo-wrapper{
+        justify-content: center;
+    }
+    .select-items{
+        text-align: center;
+    }
+    .todo-information{
+        margin: 0;
+    }
+    .todo-wrapper{
+        grid-template-columns: 1fr;
+    }
+    .todo-stats {
+        margin-bottom: 40px ;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 6px;
+    }
+    .todo-stats h2{
+        font-size: 20px;
+    }
 }

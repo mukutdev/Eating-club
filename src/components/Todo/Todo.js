@@ -3,6 +3,7 @@ import './Todo.css'
 import SingleTodo from '../SingleTodo/SingleTodo';
 import logo from '../../burger.png'
 import TodoStats from '../TodoStats/TodoStats';
+import addToLocalStorage from '../../utilities/localStorage';
 const Todo = () => {
 
     const [todos, setTodo] = useState([])
@@ -19,6 +20,7 @@ const Todo = () => {
     const handleAddToList = (todos) =>{
         const newTime = [...time,todos]
         setTime(newTime)
+        addToLocalStorage()
     }
 
     return (
@@ -28,7 +30,7 @@ const Todo = () => {
                     <img src={logo} alt="" />
                     <h1>EATING CLUB</h1>    
                    </div>
-                    <h2>Select Favourtite Items</h2>
+                    <h2 className='select-items'>Select Favourtite Items</h2>
                     <div className='todo-wrapper'>
                             {
                                 todos.map((todo) => <SingleTodo

@@ -3,6 +3,10 @@ import './TodoStats.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationPin } from '@fortawesome/free-solid-svg-icons'
 import Person from '../../person.jpg'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
+
+
 const TodoStats = ({times}) => {
     
     let istimateTime = 0
@@ -17,11 +21,12 @@ const TodoStats = ({times}) => {
         setBreakTime(value)
     }
 
+    const activityDone =()=> toast("Activity completd");
     return (
         <div className='todos-wrapper'>
             <div className="person-info">
                 <img src={Person} alt="" />
-                 <h3>James Bond</h3>
+                 <h3>Andrew Walker</h3>
                  <p>
                     <FontAwesomeIcon className='fa-Location' icon={faLocationPin}></FontAwesomeIcon>
                     <span>NewYork , USA</span>
@@ -44,11 +49,11 @@ const TodoStats = ({times}) => {
              <div className="break-info">
                 <h2>Add a Break</h2>
                 <div className="break-btn">
-                <button onClick={()=> handleBreakTime(10)}>10s</button>
-                <button onClick={()=> handleBreakTime(20)}>20s</button>
-                <button onClick={()=> handleBreakTime(30)}>30s</button>
-                <button onClick={()=> handleBreakTime(40)}>40s</button>
-                <button onClick={()=> handleBreakTime(50)}>50s</button>
+                <button onClick={()=> handleBreakTime(10)}>10m</button>
+                <button onClick={()=> handleBreakTime(20)}>20m</button>
+                <button onClick={()=> handleBreakTime(30)}>30m</button>
+                <button onClick={()=> handleBreakTime(40)}>40m</button>
+                <button onClick={()=> handleBreakTime(50)}>50m</button>
                 </div>
              </div>
 
@@ -64,7 +69,19 @@ const TodoStats = ({times}) => {
                 </div>
              </div>
              <div className="activity-done">
-                <button>Activity Completed</button>
+                <button onClick={activityDone}>Activity Completed</button>
+                <ToastContainer 
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                
+                />
              </div>
         </div>
     );

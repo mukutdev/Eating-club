@@ -5,11 +5,11 @@ const SingleTodo = ({todo , handleClick}) => {
     // console.log(name);
     // console.log(handleClick);
     return (
-        <div className='todo-card'>
-            <div className="todo-img">
+        <div className='food-card'>
+            <div className="food-img">
                 <img src={image} alt="" />
             </div>
-            <div className="todo-info">
+            <div className="food-info">
                 <h3>{name}</h3>
                 <p>{description}</p>
                 <h4>For Age : {age}</h4>
