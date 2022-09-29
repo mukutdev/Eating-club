@@ -5,9 +5,7 @@ import { faLocationPin } from '@fortawesome/free-solid-svg-icons'
 import Person from '../../person.jpg'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
-import { info } from 'autoprefixer';
-import  {addToLocal, getLocalStorage } from '../../utilities/localStorage';
-// import { addToLocalStorage, getFromLocalStorage } from '../../utilities/localStorage';
+import  {addToLocal, clearLocalStorage, getLocalStorage } from '../../utilities/localStorage';
 
 
 
@@ -28,12 +26,12 @@ const TodoStats = ({times}) => {
     useEffect(()=>{
        const getLocal = getLocalStorage()
        setBreakTime(getLocal)
-       console.log(getLocal);
     },[])
 
     const activityDone =()=> {
         toast("Activity completed");
         setBreakTime(0)
+        clearLocalStorage()
     }
     return (
         <div className='todos-wrapper'>

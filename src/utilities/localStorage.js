@@ -6,4 +6,9 @@ const getLocalStorage =()=>{
     const getLocal = localStorage.getItem('time')
     return getLocal
 }
-export {addToLocal , getLocalStorage} ;
+
+const clearLocalStorage =()=>{
+    const clear = localStorage.setItem('time'  , 0)
+    return clear;
+}
+export {addToLocal , getLocalStorage , clearLocalStorage} ;
