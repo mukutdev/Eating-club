@@ -3,7 +3,14 @@ import './TodoStats.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationPin } from '@fortawesome/free-solid-svg-icons'
 import Person from '../../person.jpg'
-const TodoStats = () => {
+const TodoStats = ({times}) => {
+    
+    let istimateTime = 0
+
+    for(const time of times) {
+        istimateTime = istimateTime + time.time
+    }
+
     return (
         <div>
             <div className="person-info">
@@ -43,7 +50,7 @@ const TodoStats = () => {
                 <h2>Eating Time</h2>
                 <div className="eating-time">
                     <h4>Eating Time</h4>
-                    <p>300 min</p>
+                    <p>{istimateTime} min</p>
                 </div>
                 <div className="break-time">
                     <h4>Break Time </h4>

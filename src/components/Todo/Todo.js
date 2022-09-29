@@ -6,6 +6,7 @@ import TodoStats from '../TodoStats/TodoStats';
 const Todo = () => {
 
     const [todos, setTodo] = useState([])
+    const [time , setTime] =useState([])
 
     useEffect(() =>{
 
@@ -16,7 +17,8 @@ const Todo = () => {
     }, [])
 
     const handleAddToList = (todos) =>{
-        console.log(todos);
+        const newTime = [...time,todos]
+        setTime(newTime)
     }
 
     return (
@@ -40,7 +42,7 @@ const Todo = () => {
                     </div>
              </div>
               <div className="todo-stats">
-                  <TodoStats></TodoStats>
+                  <TodoStats times={time}></TodoStats>
               </div>
         </div>
     );
