@@ -1,3 +1,9 @@
+.todos-wrapper{
+    position: sticky;
+    top: 0;
+    padding-top: 20px;
+}
+
 .person-info{
     margin: 20px 0;
     display: flex;
@@ -44,6 +50,7 @@
 }
 .break-btn button{
     margin: 10px 0;
+    cursor: pointer;
     background-color: #fff;
     border-radius: 50%;
     border: none;
