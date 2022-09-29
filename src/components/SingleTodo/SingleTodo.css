@@ -5,15 +5,30 @@
 }
 .todo-img img{
     width: 100%;
-    height: 100px;
+    height: 250px;
     object-fit: cover;
     border-radius: 7px;
+}
+.todo-info{
+    margin: 20px 0;
+    line-height:26px;
+}
+.todo-info h3{
+    margin: 10px 0;
+}
+.todo-info p{
+    margin-bottom: 12px;
 }
 .btn{
     width: 100%;
     padding: 13px;
-    background-color: #66BFBF;
+    font-family: montserrat;
+    font-weight: 500;
+    background-color: #C21010;
     color: #fff;
     font-size: 18px;
     border: none;
+    border-radius: 7px;
+    cursor: pointer;
+
 }

@@ -1,23 +1,35 @@
 .todo-container{
     display: grid;
     grid-template-columns: 4fr 1fr;
+    gap: 50px;
 }
-.logo{
+.todo-information{
     /* background-color: antiquewhite; */
     padding: 25px;
-    margin: 100px;
+    margin: 50px;
 }
 .todo-stats{
     background-color: #fff;
     padding: 15px;
 }
-.todo-list h1{
-    color: #66BFBF;
+
+.logo-wrapper{
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-wrapper h1{
+    color: #C21010;
+    font-size: 28px;
+    padding-top: 20px;
+    margin-left: 15px;
 }
 .icon-dumb{
-    color: #66BFBF;
+    color: #C21010;
 }
 .todo-wrapper{
+    margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(3 , 1fr);
     gap: 20px;

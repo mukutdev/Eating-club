@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './Todo.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDumbbell } from '@fortawesome/free-solid-svg-icons'
 import SingleTodo from '../SingleTodo/SingleTodo';
+import logo from '../../burger.png'
+import TodoStats from '../TodoStats/TodoStats';
 const Todo = () => {
 
     const [todos, setTodo] = useState([])
@@ -17,9 +17,12 @@ const Todo = () => {
 
     return (
         <div className='todo-container'>
-             <div className="logo">
-                    <h1> <FontAwesomeIcon className='icon-dumb' icon={faDumbbell} /> Fitness Club</h1>
-
+             <div className="todo-information">
+                   <div className="logo-wrapper">
+                    <img src={logo} alt="" />
+                    <h1>EATING CLUB</h1>    
+                   </div>
+                    <h2>Select Favourtite Items</h2>
                     <div className='todo-wrapper'>
                             {
                                 todos.map((todo) => <SingleTodo
@@ -32,7 +35,7 @@ const Todo = () => {
                     </div>
              </div>
               <div className="todo-stats">
-             <h2>world</h2>
+                  <TodoStats></TodoStats>
               </div>
         </div>
     );
