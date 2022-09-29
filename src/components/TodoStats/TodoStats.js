@@ -28,6 +28,16 @@ const TodoStats = () => {
                     <p>Height</p>
                 </div>
             </div>
+             <div className="break-info">
+                <h2>Add a Break</h2>
+                <div className="break-time">
+                <button>10s</button>
+                <button>20s</button>
+                <button>30s</button>
+                <button>40s</button>
+                <button>50s</button>
+                </div>
+             </div>
         </div>
     );
 };
