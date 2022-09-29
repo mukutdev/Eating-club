@@ -1,0 +1,19 @@
+.ques-container{
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 6px;
+    background-color: #fff;
+}
+.ques-wrapper{
+    margin: 20px 0;
+}
+
+
+
+
+@media screen and (max-width: 576px) {
+    .ques-container h1{
+        font-size: 26px;
+        line-height: 32px;
+    }
+}

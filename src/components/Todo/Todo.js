@@ -4,6 +4,7 @@ import SingleTodo from '../SingleTodo/SingleTodo';
 import logo from '../../burger.png'
 import TodoStats from '../TodoStats/TodoStats';
 import addToLocalStorage from '../../utilities/localStorage';
+import Question from '../Question/Question';
 const Todo = () => {
 
     const [todos, setTodo] = useState([])
@@ -20,7 +21,8 @@ const Todo = () => {
     const handleAddToList = (todos) =>{
         const newTime = [...time,todos]
         setTime(newTime)
-        addToLocalStorage()
+        addToLocalStorage(newTime)
+        console.log(newTime);
     }
 
     return (
@@ -41,6 +43,10 @@ const Todo = () => {
                                 >
                                 </SingleTodo> )
                             }
+                    </div>
+
+                    <div>
+                    <Question></Question>
                     </div>
              </div>
               <div className="todo-stats">
