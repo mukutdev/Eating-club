@@ -1,8 +1,9 @@
 import React from 'react';
 import './SingleTodo.css'
-const SingleTodo = ({todo}) => {
+const SingleTodo = ({todo , handleClick}) => {
     const {image , name, description , age , time} = todo
-    console.log(name);
+    // console.log(name);
+    // console.log(handleClick);
     return (
         <div className='todo-card'>
             <div className="todo-img">
@@ -15,7 +16,7 @@ const SingleTodo = ({todo}) => {
                 <h4>Time required : {time} min</h4>
             </div>
             <div className="todo-btn">
-                <button className='btn'>Add To List</button>
+                <button onClick={()=>handleClick(todo)} className='btn'>Add To List</button>
             </div>
         </div>
     );

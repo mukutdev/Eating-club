@@ -30,13 +30,28 @@ const TodoStats = () => {
             </div>
              <div className="break-info">
                 <h2>Add a Break</h2>
-                <div className="break-time">
+                <div className="break-btn">
                 <button>10s</button>
                 <button>20s</button>
                 <button>30s</button>
                 <button>40s</button>
                 <button>50s</button>
                 </div>
+             </div>
+
+             <div className="eating-details">
+                <h2>Eating Time</h2>
+                <div className="eating-time">
+                    <h4>Eating Time</h4>
+                    <p>300 min</p>
+                </div>
+                <div className="break-time">
+                    <h4>Break Time </h4>
+                    <p>20 min</p>
+                </div>
+             </div>
+             <div className="activity-done">
+                <button>Activity Completed</button>
              </div>
         </div>
     );

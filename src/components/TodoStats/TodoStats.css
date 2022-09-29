@@ -25,6 +25,8 @@
     margin-right: 10px;
 }
 .physical-info,
+.break-btn,
+.eating-time,
 .break-time{
     display: flex;
     justify-content: space-around;
@@ -40,7 +42,7 @@
     font-size: 26px;
     padding: 7px 0;
 }
-.break-time button{
+.break-btn button{
     margin: 10px 0;
     background-color: #fff;
     border-radius: 50%;
@@ -50,4 +52,24 @@
    width: 50px;
     font-size: 16px;
     font-weight: 500;
+}
+.eating-time,
+.break-time{
+   padding: 30px 0;
+}
+.activity-done{
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+.activity-done button{
+    border: none;
+    width: 100%;
+    padding: 20px  0;
+    font-family: montserrat;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    color: #000;
+    cursor: pointer;
 }

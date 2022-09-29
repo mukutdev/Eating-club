@@ -15,6 +15,10 @@ const Todo = () => {
 
     }, [])
 
+    const handleAddToList = (todos) =>{
+        console.log(todos);
+    }
+
     return (
         <div className='todo-container'>
              <div className="todo-information">
@@ -28,7 +32,8 @@ const Todo = () => {
                                 todos.map((todo) => <SingleTodo
                                 
                                 key={todo.id}
-                                todo={todo}                                
+                                todo={todo} 
+                                handleClick ={handleAddToList}                               
                                 >
                                 </SingleTodo> )
                             }
