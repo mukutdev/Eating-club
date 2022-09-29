@@ -61,7 +61,7 @@
     font-weight: 500;
 }
 
-.break-btn button:hover{
+.break-btn > button:hover{
     background-color: #FFDE00;
     color: #000;
 }
@@ -74,7 +74,7 @@
     display: flex;
     justify-content: center;
 }
-.activity-done button{
+.activity-done > button{
     border: none;
     width: 100%;
     padding: 20px  0;
