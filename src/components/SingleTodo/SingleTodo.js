@@ -2,8 +2,6 @@ import React from 'react';
 import './SingleTodo.css'
 const SingleTodo = ({todo , handleClick}) => {
     const {image , name, description , age , time} = todo
-    // console.log(name);
-    // console.log(handleClick);
     return (
         <div className='food-card'>
             <div className="food-img">

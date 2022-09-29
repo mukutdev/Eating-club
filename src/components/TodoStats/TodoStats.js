@@ -32,6 +32,8 @@ const TodoStats = ({times}) => {
         toast("Activity completed");
         setBreakTime(0)
         clearLocalStorage()
+        console.log(times);
+        istimateTime = 0
     }
     return (
         <div className='todos-wrapper'>
@@ -76,7 +78,7 @@ const TodoStats = ({times}) => {
                 </div>
                 <div className="break-time">
                     <h4>Break Time </h4>
-                    <p>{breakTime} min</p>
+                    <p>{breakTime ? breakTime : 0} min</p>
                 </div>
              </div>
              <div className="activity-done">
