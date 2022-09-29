@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './TodoStats.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationPin } from '@fortawesome/free-solid-svg-icons'
 import Person from '../../person.jpg'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
+import { info } from 'autoprefixer';
+import  {addToLocal, getLocalStorage } from '../../utilities/localStorage';
+// import { addToLocalStorage, getFromLocalStorage } from '../../utilities/localStorage';
+
 
 
 const TodoStats = ({times}) => {
@@ -19,9 +23,18 @@ const TodoStats = ({times}) => {
 
     const handleBreakTime = (value)=>{
         setBreakTime(value)
+        addToLocal(value)
     }
+    useEffect(()=>{
+       const getLocal = getLocalStorage()
+       setBreakTime(getLocal)
+       console.log(getLocal);
+    },[])
 
-    const activityDone =()=> toast("Activity completd");
+    const activityDone =()=> {
+        toast("Activity completed");
+        setBreakTime(0)
+    }
     return (
         <div className='todos-wrapper'>
             <div className="person-info">

@@ -1,5 +1,9 @@
-const addToLocalStorage =(time)=>{
-    localStorage.setItem('eat-details', JSON.stringify(time));
+const addToLocal=(value)=>{
+    localStorage.setItem('time'  , value)
 }
 
-export default addToLocalStorage;
+const getLocalStorage =()=>{
+    const getLocal = localStorage.getItem('time')
+    return getLocal
+}
+export {addToLocal , getLocalStorage} ;

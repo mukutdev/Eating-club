@@ -3,7 +3,6 @@ import './Todo.css'
 import SingleTodo from '../SingleTodo/SingleTodo';
 import logo from '../../burger.png'
 import TodoStats from '../TodoStats/TodoStats';
-import addToLocalStorage from '../../utilities/localStorage';
 import Question from '../Question/Question';
 const Todo = () => {
 
@@ -21,8 +20,6 @@ const Todo = () => {
     const handleAddToList = (todos) =>{
         const newTime = [...time,todos]
         setTime(newTime)
-        addToLocalStorage(newTime)
-        console.log(newTime);
     }
 
     return (
